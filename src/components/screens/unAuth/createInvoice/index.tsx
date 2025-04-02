@@ -71,6 +71,7 @@ let reqSample = {
         postcode: '1000',
         county: 'hoangmai',
         city: 'hanoi',
+        addressType: 'BILLING',
       },
     ],
   },
@@ -201,7 +202,6 @@ const CreateInvoiceScreenComp: React.FC<CreateInvoiceScreenProps> = ({
               <AuthInput
                 heading={t('createInvoicesScreen:referenceFieldHeading')}
                 onChangeText={handleChange('reference')}
-                onBlur={handleBlur('reference')}
                 value={values.reference}
                 fontSize="md"
                 type="text"
@@ -214,7 +214,6 @@ const CreateInvoiceScreenComp: React.FC<CreateInvoiceScreenProps> = ({
               <AuthInput
                 heading={t('createInvoicesScreen:dateFieldHeading')}
                 onChangeText={handleChange('date')}
-                onBlur={handleBlur('date')}
                 value={values.date}
                 fontSize="md"
                 keyboardType="numbers-and-punctuation"
@@ -230,7 +229,6 @@ const CreateInvoiceScreenComp: React.FC<CreateInvoiceScreenProps> = ({
               <AuthInput
                 heading={t('createInvoicesScreen:amountFieldHeading')}
                 onChangeText={handleChange('amount')}
-                onBlur={handleBlur('amount')}
                 value={values.amount}
                 fontSize="md"
                 returnKeyType="done"
@@ -246,7 +244,6 @@ const CreateInvoiceScreenComp: React.FC<CreateInvoiceScreenProps> = ({
               <AppTextArea
                 heading={t('createInvoicesScreen:descriptionFieldHeading')}
                 onChangeText={handleChange('description')}
-                onBlur={handleBlur('description')}
                 value={values.description}
                 fontSize="md"
                 returnKeyType="done"

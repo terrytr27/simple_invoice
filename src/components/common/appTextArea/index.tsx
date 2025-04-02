@@ -16,6 +16,7 @@ const AppTextAreaComp = React.forwardRef<TextInput, AppTextAreaProps>(
       <VStack {...containerProps}>
         <Text fontSize={'md'}>{heading}</Text>
         <TextArea
+          _stack={{style: {}}}
           mt={'1'}
           fontSize={'md'}
           autoCompleteType={false}
