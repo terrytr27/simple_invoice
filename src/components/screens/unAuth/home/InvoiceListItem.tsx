@@ -101,11 +101,12 @@ const InvoiceListItemComp: React.FC<InvoiceListItemProps> = ({
             textColor="green.600"
           />
         </VStack>
-        <Text fontSize={'md'} mt={2} bold>
-          Customer Information
-        </Text>
+        <Text fontSize={'md'} mt={2} bold></Text>
         {customer && (
-          <RenderDetailItem title="Name:" description={`${customer.name}`} />
+          <RenderDetailItem
+            title="Name:"
+            description={`${customer.firstName} ${customer.lastName}`}
+          />
         )}
       </VStack>
     </Pressable>
