@@ -1,0 +1,15 @@
+diff --git a/node_modules/native-base/src/hooks/useKeyboardDismissable.ts b/node_modules/native-base/src/hooks/useKeyboardDismissable.ts
+index f3cfa44..3bcde8b 100644
+--- a/node_modules/native-base/src/hooks/useKeyboardDismissable.ts
++++ b/node_modules/native-base/src/hooks/useKeyboardDismissable.ts
+@@ -51,9 +51,7 @@ export function useBackHandler({ enabled, callback }: IParams) {
+     if (enabled) {
+       BackHandler.addEventListener('hardwareBackPress', backHandler);
+     } else {
+-      BackHandler.removeEventListener('hardwareBackPress', backHandler);
++      // BackHandler.removeEventListener('hardwareBackPress', backHandler);
+     }
+-    return () =>
+-      BackHandler.removeEventListener('hardwareBackPress', backHandler);
+   }, [enabled, callback]);
+ }
