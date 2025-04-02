@@ -143,6 +143,7 @@ const HomeScreenComp: React.FC<HomeScreenProps> = () => {
           type={'text'}
           containerProps={{
             flex: 1,
+            borderRadius: 20,
           }}
           returnKeyType="done"
           onChangeText={text => {
@@ -160,10 +161,10 @@ const HomeScreenComp: React.FC<HomeScreenProps> = () => {
               onPress={() => {
                 FetchInvoices(queryParams);
               }}>
-              Search
+              Find
             </AppButton>
           }
-          placeholder="Enter invoice number"
+          placeholder="Invoice ID"
         />
       </HStack>
       <HStack
@@ -223,6 +224,7 @@ const HomeScreenComp: React.FC<HomeScreenProps> = () => {
           height: 50,
           justifyContent: 'center',
           alignItems: 'center',
+          backgroundColor: 'black',
         }}
         renderInPortal={false}
         label={t('common:addInvoice')}

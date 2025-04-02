@@ -200,7 +200,8 @@ const CreateInvoiceScreenComp: React.FC<CreateInvoiceScreenProps> = ({
           {({errors, handleChange, handleBlur, handleSubmit, values}) => (
             <>
               <AuthInput
-                heading={t('createInvoicesScreen:referenceFieldHeading')}
+                placeholder={t('createInvoicesScreen:referenceFieldHeading')}
+                heading={''}
                 onChangeText={handleChange('reference')}
                 value={values.reference}
                 fontSize="md"
@@ -212,14 +213,14 @@ const CreateInvoiceScreenComp: React.FC<CreateInvoiceScreenProps> = ({
                 error={errors.reference}
               />
               <AuthInput
-                heading={t('createInvoicesScreen:dateFieldHeading')}
+                heading={''}
                 onChangeText={handleChange('date')}
                 value={values.date}
                 fontSize="md"
                 keyboardType="numbers-and-punctuation"
                 returnKeyType="done"
                 type="text"
-                placeholder={t('createInvoicesScreen:dateFieldPlaceholder')}
+                placeholder={t('createInvoicesScreen:dateFieldHeading')}
                 containerProps={{
                   mt: 3,
                 }}
@@ -227,7 +228,8 @@ const CreateInvoiceScreenComp: React.FC<CreateInvoiceScreenProps> = ({
                 error={errors.date}
               />
               <AuthInput
-                heading={t('createInvoicesScreen:amountFieldHeading')}
+                heading=""
+                placeholder={t('createInvoicesScreen:amountFieldHeading')}
                 onChangeText={handleChange('amount')}
                 value={values.amount}
                 fontSize="md"
@@ -242,7 +244,8 @@ const CreateInvoiceScreenComp: React.FC<CreateInvoiceScreenProps> = ({
               />
 
               <AppTextArea
-                heading={t('createInvoicesScreen:descriptionFieldHeading')}
+                heading=""
+                placeholder={t('createInvoicesScreen:descriptionFieldHeading')}
                 onChangeText={handleChange('description')}
                 value={values.description}
                 fontSize="md"

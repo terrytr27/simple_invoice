@@ -15,9 +15,9 @@ const AppInputComp = React.forwardRef<TextInput, AppInputProps>(
     const {heading, containerProps, ...rest} = props;
     return (
       <VStack {...containerProps}>
-        <Text fontSize={'md'}>{heading}</Text>
+        {!!heading && <Text fontSize={'md'}>{heading}</Text>}
         <Input
-          _stack={{style: {}}}
+          _stack={{style: {borderRadius: 10}}}
           ref={ref!!}
           mt={'1'}
           fontSize="md"

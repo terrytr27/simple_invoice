@@ -20,7 +20,7 @@ export const AuthValidations = {
 //invoice order status filter data
 export const ORDER_STATUS_FILTER_DATA = [
   {
-    label: 'All orders',
+    label: 'All',
     value: '',
   },
   {
@@ -39,11 +39,11 @@ export const ORDER_STATUS_FILTER_DATA = [
 //invoice order sort data
 export const ORDER_SORT_DATA = [
   {
-    label: 'Ascending order',
+    label: 'Ascending',
     value: 'ASCENDING',
   },
   {
-    label: 'Descending order',
+    label: 'Descending',
     value: 'DESCENDING',
   },
 ];

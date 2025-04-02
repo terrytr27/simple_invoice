@@ -91,9 +91,6 @@ const LoginScreenComp: React.FC<LoginScreenProps> = () => {
                 }}
                 error={errors.password}
               />
-              <Text onPress={() => {}} mt={'4'} color={'primary.700'}>
-                {t('common:forgot_password')}
-              </Text>
 
               <AppButton mt={'8'} onPress={() => handleSubmit()}>
                 {t('common:login')}

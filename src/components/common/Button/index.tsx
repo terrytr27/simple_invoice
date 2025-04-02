@@ -9,6 +9,7 @@ const AppButtonComp: React.FC<AppButtonProps> = props => {
   const {...rest} = props;
   return (
     <Button
+      style={{backgroundColor: 'black'}}
       _text={{
         fontWeight: '700',
         fontSize: 'md',

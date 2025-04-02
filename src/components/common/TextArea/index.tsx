@@ -14,7 +14,7 @@ const AppTextAreaComp = React.forwardRef<TextInput, AppTextAreaProps>(
     const {heading, containerProps, ...rest} = props;
     return (
       <VStack {...containerProps}>
-        <Text fontSize={'md'}>{heading}</Text>
+        {!!heading && <Text fontSize={'md'}>{heading}</Text>}
         <TextArea
           _stack={{style: {}}}
           mt={'1'}

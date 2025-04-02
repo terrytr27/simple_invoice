@@ -21,7 +21,7 @@
   },
   "common": {
     "signIn": "Sign In",
-    "login": "Login",
+    "login": "Sign In",
     "logout": "Logout",
     "signUp": "Sign up",
     "register": "Register",
@@ -48,16 +48,16 @@
     "empty_product": "The product list is empty"
   },
   "loginScreen": {
-    "emailPlaceholder": "Enter Email",
-    "passwordPlaceholder": "Enter Password",
+    "emailPlaceholder": "User Name",
+    "passwordPlaceholder": "Password",
     "emailInputError": "Invalid Email",
     "passwordInputError": "Invalid Password"
   },
   "dashboardScreen": {
-    "sortSelectorPlaceholder": "Order sorting",
-    "statusSelectorPlaceholder": "Filter Orders",
+    "sortSelectorPlaceholder": "Order by",
+    "statusSelectorPlaceholder": "Filter by",
     "orderStatusSelectorPlaceholder": "paid etc",
-    "orderSrotSelectorPlaceholder": "ascending etc"
+    "orderSrotSelectorPlaceholder": "Order"
   },
   "createInvoicesScreen": {
     "title": "Create Invoice",
