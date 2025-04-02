@@ -74,7 +74,13 @@ const InvoiceListItemComp: React.FC<InvoiceListItemProps> = ({
         <Text numberOfLines={2} color="coolGray.600">
           {description}
         </Text>
-        <VStack mt={3}>
+        {customer && (
+          <RenderDetailItem
+            title="Name:"
+            description={`${customer.firstName} ${customer.lastName}`}
+          />
+        )}
+        <VStack>
           <RenderDetailItem
             title="Date:"
             description={`${invoiceDate}`}
@@ -101,13 +107,6 @@ const InvoiceListItemComp: React.FC<InvoiceListItemProps> = ({
             textColor="green.600"
           />
         </VStack>
-        <Text fontSize={'md'} mt={2} bold></Text>
-        {customer && (
-          <RenderDetailItem
-            title="Name:"
-            description={`${customer.firstName} ${customer.lastName}`}
-          />
-        )}
       </VStack>
     </Pressable>
   );
