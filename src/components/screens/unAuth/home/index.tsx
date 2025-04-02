@@ -218,6 +218,12 @@ const HomeScreenComp: React.FC<HomeScreenProps> = () => {
         )}
       />
       <Fab
+        style={{
+          width: 50,
+          height: 50,
+          justifyContent: 'center',
+          alignItems: 'center',
+        }}
         renderInPortal={false}
         label={t('common:addInvoice')}
         shadow={2}
