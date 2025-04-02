@@ -10,10 +10,10 @@
       "@redux/*": ["./src/redux/*"],
       "@components/*": ["./src/components/*"],
       "@navigation/*": ["./src/navigation/*"],
-      "@lib/*": ["./src/lib/*"],
+      "@lib/*": ["src/axios/*"],
       "@ui-kit/*": ["./src/ui-kit/*"],
-      "@themes/*": ["./src/themes/*"],
-      "@utilities/*": ["./src/utilities/*"],
+      "@themes/*": ["src/theme/*"],
+      "@utilities/*": ["src/utils/*"],
       "@screens/*": ["./src/components/screens/*"],
       "@models/*": ["./src/models/*"]
     }

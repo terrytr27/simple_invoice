@@ -5,7 +5,7 @@ import {
 } from '@react-navigation/native-stack';
 import {View} from 'react-native';
 import {HomeScreen} from '@components/screens/Unauthenticated/Home';
-import {APP_SCREEN, HomeStackParamList} from '@utilities/types';
+import {APP_SCREEN, HomeStackParamList} from 'src/utils/types';
 import isEqual from 'react-fast-compare';
 import {CreateInvoiceScreen} from '@components/screens/Unauthenticated/AddInvoice';
 

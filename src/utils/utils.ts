@@ -1,6 +1,6 @@
 import {Alert} from 'react-native';
 import {APIError} from './types';
-import {InternalError} from '@lib/API';
+import {InternalError} from 'src/axios/API';
 import axios, {AxiosError} from 'axios';
 import * as Yup from 'yup';
 import {AuthValidations} from './constants';

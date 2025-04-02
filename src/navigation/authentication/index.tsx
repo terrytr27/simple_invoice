@@ -5,7 +5,7 @@ import {
 } from '@react-navigation/native-stack';
 import {View} from 'react-native';
 import {LoginScreen} from '@components/screens/Auth/Login';
-import {APP_SCREEN, AuthStackParamList} from '@utilities/types';
+import {APP_SCREEN, AuthStackParamList} from 'src/utils/types';
 import isEqual from 'react-fast-compare';
 
 const Stack = createNativeStackNavigator<AuthStackParamList>();

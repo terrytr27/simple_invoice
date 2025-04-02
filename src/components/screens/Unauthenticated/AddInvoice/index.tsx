@@ -1,18 +1,18 @@
 import React, {memo, useEffect, useState} from 'react';
-import {APP_SCREEN, HomeStackParamList} from '@utilities/types';
+import {APP_SCREEN, HomeStackParamList} from 'src/utils/types';
 import {useNavigation} from '@react-navigation/native';
 import isEqual from 'react-fast-compare';
 import {Image, Pressable, VStack} from 'native-base';
 import {AppHeading} from '@common/Heading';
-import {APP_URLS} from '@utilities/constants';
-import API from '@lib/API';
+import {APP_URLS} from 'src/utils/constants';
+import API from 'src/axios/API';
 import {
   GetCreateInvoiceFormValidations,
   getExceptionPayload,
   GetRandomDescription,
   RandomNumberGenerator,
   showAlertDialog,
-} from '@utilities/utils';
+} from 'src/utils/utils';
 import {Formik} from 'formik';
 import {AuthInput} from '@common/Input';
 

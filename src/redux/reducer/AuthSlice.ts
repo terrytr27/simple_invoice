@@ -1,10 +1,10 @@
 import {IAuthResponse, IProfileResponse} from '@models/APIModels';
 import {SLICE_NAME} from '@models/generalTypes';
 import {createAsyncThunk, createSlice, PayloadAction} from '@reduxjs/toolkit';
-import {APP_URLS} from '@utilities/constants';
-import {APIResponse} from '@utilities/types';
-import {getExceptionPayload, showAlertDialog} from '@utilities/utils';
-import API from '../../lib/API';
+import {APP_URLS} from 'src/utils/constants';
+import {APIResponse} from 'src/utils/types';
+import {getExceptionPayload, showAlertDialog} from 'src/utils/utils';
+import API from '../../axios/API';
 import {Alert} from 'react-native';
 
 export interface AuthStateType {

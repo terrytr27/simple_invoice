@@ -7,9 +7,9 @@ import {I18nextProvider} from 'react-i18next';
 import {Provider} from 'react-redux';
 import storeConfig from './src/redux/store';
 import AppNavigator from './src/navigation/index';
-import I18n from './src/utilities/i18n/i18n';
+import I18n from './src/utils/i18n/i18n';
 import {extendTheme, NativeBaseProvider} from 'native-base';
-import {NATIVE_BASE_CONFIG} from '@utilities/constants';
+import {NATIVE_BASE_CONFIG} from 'src/utils/constants';
 
 const theme = extendTheme(NATIVE_BASE_CONFIG);
 

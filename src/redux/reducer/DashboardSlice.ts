@@ -1,10 +1,10 @@
-import {API} from '@lib/API';
+import {API} from 'src/axios/API';
 import {IInvoice} from '@models/APIModels';
 import {SLICE_NAME} from '@models/generalTypes';
 import {createAsyncThunk, createSlice, PayloadAction} from '@reduxjs/toolkit';
-import {APP_URLS} from '@utilities/constants';
-import {APIResponse} from '@utilities/types';
-import {getExceptionPayload, showAlertDialog} from '@utilities/utils';
+import {APP_URLS} from 'src/utils/constants';
+import {APIResponse} from 'src/utils/types';
+import {getExceptionPayload, showAlertDialog} from 'src/utils/utils';
 
 interface AppState {
   invoicesList: IInvoice[];

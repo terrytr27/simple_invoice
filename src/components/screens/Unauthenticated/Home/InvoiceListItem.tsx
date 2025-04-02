@@ -3,7 +3,7 @@ import {StyleSheet, ViewStyle} from 'react-native';
 import {Box, HStack, Pressable, Text, VStack} from 'native-base';
 import React, {memo} from 'react';
 import isEqual from 'react-fast-compare';
-import {colors} from '@themes/colors';
+import {colors} from 'src/theme/colors';
 import {ColorType} from 'native-base/lib/typescript/components/types';
 
 interface IStyles {
@@ -69,14 +69,14 @@ const InvoiceListItemComp: React.FC<InvoiceListItemProps> = ({
       py={2}>
       <VStack borderBottomWidth="0" px={2}>
         <Text fontSize={'lg'} numberOfLines={1} bold>
-          {invoiceNumber}
+          {`Ref: #${invoiceNumber}`}
         </Text>
         <Text numberOfLines={2} color="coolGray.600">
           {description}
         </Text>
         <VStack mt={3}>
           <RenderDetailItem
-            title="Invoice Date:"
+            title="Date:"
             description={`${invoiceDate}`}
             textColor="black"
           />
@@ -86,17 +86,17 @@ const InvoiceListItemComp: React.FC<InvoiceListItemProps> = ({
             textColor="red.500"
           />
           <RenderDetailItem
-            title="Total Amount:"
+            title="Amount:"
             description={`${totalAmount} ${currencySymbol}`}
             textColor="black"
           />
           <RenderDetailItem
-            title="total Paid:"
+            title="Paid:"
             description={`${totalPaid} ${currencySymbol}`}
             textColor="red.500"
           />
           <RenderDetailItem
-            title="Balance Amount:"
+            title="Balance:"
             description={`${balanceAmount} ${currencySymbol}`}
             textColor="green.600"
           />

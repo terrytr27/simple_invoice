@@ -1,8 +1,8 @@
 import {AtuhActions} from '@redux/reducer/AuthSlice';
 import {store} from '@redux/store';
-import {APP_URLS} from '@utilities/constants';
-import {APIError} from '@utilities/types';
-import {Logger, showAlertDialog} from '@utilities/utils';
+import {APP_URLS} from 'src/utils/constants';
+import {APIError} from 'src/utils/types';
+import {Logger, showAlertDialog} from 'src/utils/utils';
 import axios, {AxiosRequestConfig} from 'axios';
 
 const instance = axios.create({

@@ -1,4 +1,4 @@
-import {HP} from '@utilities/ResponsiveSize';
+import {HP} from 'src/utils/ResponsiveSize';
 import React, {memo} from 'react';
 import isEqual from 'react-fast-compare';
 import {StyleSheet, View, Modal, ActivityIndicator} from 'react-native';

@@ -28,10 +28,12 @@ const AppSelectComp: React.FC<AppSelectProps> = props => {
         }}
         borderColor={error ? 'red.400' : null}
         fontSize={'md'}
+        rounded={'xl'}
         dropdownIcon={<ChevronDownIcon mr={'3'} size={4} />}
         _selectedItem={{
           bg: 'primary.400',
           tintColor: 'white',
+          borderRadius: 10,
         }}
         {...rest}>
         {children}

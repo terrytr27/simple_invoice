@@ -3,7 +3,7 @@ import {combineReducers} from 'redux';
 import {persistReducer} from 'redux-persist';
 import {AuthReducer} from './AuthSlice';
 
-import createSensitiveStorage from '@utilities/SensitiveStorage';
+import createSensitiveStorage from 'src/utils/SensitiveStorage';
 import {DashboardReducer} from './DashboardSlice';
 
 //securing sensitive info

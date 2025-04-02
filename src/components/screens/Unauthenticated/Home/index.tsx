@@ -1,5 +1,5 @@
 import React, {memo, useCallback, useEffect, useRef, useState} from 'react';
-import {APP_SCREEN, HomeStackParamList} from '@utilities/types';
+import {APP_SCREEN, HomeStackParamList} from 'src/utils/types';
 import {useNavigation} from '@react-navigation/native';
 import {
   NativeStackNavigationProp,
@@ -24,9 +24,9 @@ import {IInvoice} from '@models/APIModels';
 import {InvoiceListItem} from './InvoiceListItem';
 import {InteractionManager, RefreshControl, TextInput} from 'react-native';
 import {getInvoicesList} from '@redux/reducer/DashboardSlice';
-import {ORDER_SORT_DATA, ORDER_STATUS_FILTER_DATA} from '@utilities/constants';
+import {ORDER_SORT_DATA, ORDER_STATUS_FILTER_DATA} from 'src/utils/constants';
 import {AppSelect} from '@common/Selection';
-import {WP} from '@utilities/ResponsiveSize';
+import {WP} from 'src/utils/ResponsiveSize';
 import {useTranslation} from 'react-i18next';
 import {AppInput} from '@common/AppInput';
 import {AppHeading} from '@common/Heading';
