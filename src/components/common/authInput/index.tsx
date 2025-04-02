@@ -26,4 +26,4 @@ const AuthInputComp: React.FC<AuthInputProps> = props => {
   );
 };
 
-export const AuthInput = memo(AuthInputComp, isEqual);
+export const AuthInput = AuthInputComp;

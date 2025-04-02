@@ -180,6 +180,7 @@ const CreateInvoiceScreenComp: React.FC<CreateInvoiceScreenProps> = ({
             my={'5'}
             alt={`backArrow`}
             source={images.icLeftArrow}
+            style={{width: 30, height: 30}}
           />
         </Pressable>
         <AppHeading mb={'1'}>{t('createInvoicesScreen:title')}</AppHeading>

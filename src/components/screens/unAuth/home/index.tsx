@@ -1,6 +1,6 @@
 import React, {memo, useCallback, useEffect, useRef, useState} from 'react';
 import {APP_SCREEN, HomeStackParamList} from '@utilities/types';
-import {useFocusEffect, useNavigation} from '@react-navigation/native';
+import {useNavigation} from '@react-navigation/native';
 import {
   NativeStackNavigationProp,
   NativeStackScreenProps,
@@ -16,6 +16,7 @@ import {
   Select,
   Text,
   VStack,
+  Input,
 } from 'native-base';
 import {AppButton} from '@common/appButton';
 import {Loader} from '@common/loader';
@@ -28,9 +29,7 @@ import {AppSelect} from '@common/appSelect';
 import {WP} from '@utilities/ResponsiveSize';
 import {useTranslation} from 'react-i18next';
 import {AppInput} from '@common/appInput';
-import SvgWavingHand from '@assets/images/source/svg_WavingHand.svg';
 import {AppHeading} from '@common/appHeading';
-import {AtuhActions} from '@redux/reducer/AuthSlice';
 
 type HomeScreenProps = NativeStackScreenProps<
   HomeStackParamList,

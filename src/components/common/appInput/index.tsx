@@ -17,6 +17,7 @@ const AppInputComp = React.forwardRef<TextInput, AppInputProps>(
       <VStack {...containerProps}>
         <Text fontSize={'md'}>{heading}</Text>
         <Input
+          _stack={{style: {}}}
           ref={ref!!}
           mt={'1'}
           fontSize="md"
