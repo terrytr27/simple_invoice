@@ -4,7 +4,7 @@ import {
   NativeStackNavigationOptions,
 } from '@react-navigation/native-stack';
 import {View} from 'react-native';
-import {LoginScreen} from '@components/screens/auth/login';
+import {LoginScreen} from '@components/screens/Auth/Login';
 import {APP_SCREEN, AuthStackParamList} from '@utilities/types';
 import isEqual from 'react-fast-compare';
 

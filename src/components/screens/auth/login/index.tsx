@@ -8,13 +8,13 @@ import {authLogin} from '@redux/reducer/AuthSlice';
 import isEqual from 'react-fast-compare';
 import {Box, VStack, Text} from 'native-base';
 import {Formik} from 'formik';
-import {Loader} from '@common/loader';
-import {AuthInput} from '@common/authInput';
+import {Loader} from '@common/LoadingIndicator';
+import {AuthInput} from '@common/Input';
 import {useTranslation} from 'react-i18next';
 import {GetLoginFormValidations} from '@utilities/utils';
 import {useAppDispatch, useAppSelector} from '@hooks/redux';
-import {AppButton} from '@common/appButton';
-import {AppHeading} from '@common/appHeading';
+import {AppButton} from '@common/Button';
+import {AppHeading} from '@common/Heading';
 
 type LoginScreenProps = NativeStackScreenProps<
   AuthStackParamList,

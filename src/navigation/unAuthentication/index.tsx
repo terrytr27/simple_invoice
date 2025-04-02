@@ -4,10 +4,10 @@ import {
   NativeStackNavigationOptions,
 } from '@react-navigation/native-stack';
 import {View} from 'react-native';
-import {HomeScreen} from '@screens/unAuth/home';
+import {HomeScreen} from '@components/screens/Unauthenticated/Home';
 import {APP_SCREEN, HomeStackParamList} from '@utilities/types';
 import isEqual from 'react-fast-compare';
-import {CreateInvoiceScreen} from '@components/screens/unAuth/createInvoice';
+import {CreateInvoiceScreen} from '@components/screens/Unauthenticated/AddInvoice';
 
 const Stack = createNativeStackNavigator<HomeStackParamList>();
 

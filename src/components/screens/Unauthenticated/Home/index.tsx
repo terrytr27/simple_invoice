@@ -18,18 +18,18 @@ import {
   VStack,
   Input,
 } from 'native-base';
-import {AppButton} from '@common/appButton';
-import {Loader} from '@common/loader';
+import {AppButton} from '@common/Button';
+import {Loader} from '@common/LoadingIndicator';
 import {IInvoice} from '@models/APIModels';
 import {InvoiceListItem} from './InvoiceListItem';
 import {InteractionManager, RefreshControl, TextInput} from 'react-native';
 import {getInvoicesList} from '@redux/reducer/DashboardSlice';
 import {ORDER_SORT_DATA, ORDER_STATUS_FILTER_DATA} from '@utilities/constants';
-import {AppSelect} from '@common/appSelect';
+import {AppSelect} from '@common/Selection';
 import {WP} from '@utilities/ResponsiveSize';
 import {useTranslation} from 'react-i18next';
-import {AppInput} from '@common/appInput';
-import {AppHeading} from '@common/appHeading';
+import {AppInput} from '@common/AppInput';
+import {AppHeading} from '@common/Heading';
 
 type HomeScreenProps = NativeStackScreenProps<
   HomeStackParamList,

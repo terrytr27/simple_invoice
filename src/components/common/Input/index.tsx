@@ -1,4 +1,4 @@
-import {AppInput, AppInputProps} from '@common/appInput';
+import {AppInput, AppInputProps} from '@common/AppInput';
 import {HStack, Text, VStack, WarningOutlineIcon} from 'native-base';
 import {InterfaceVStackProps} from 'native-base/lib/typescript/components/primitives/Stack/VStack';
 import React, {memo} from 'react';

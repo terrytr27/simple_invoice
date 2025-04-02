@@ -3,7 +3,7 @@ import {APP_SCREEN, HomeStackParamList} from '@utilities/types';
 import {useNavigation} from '@react-navigation/native';
 import isEqual from 'react-fast-compare';
 import {Image, Pressable, VStack} from 'native-base';
-import {AppHeading} from '@common/appHeading';
+import {AppHeading} from '@common/Heading';
 import {APP_URLS} from '@utilities/constants';
 import API from '@lib/API';
 import {
@@ -14,7 +14,7 @@ import {
   showAlertDialog,
 } from '@utilities/utils';
 import {Formik} from 'formik';
-import {AuthInput} from '@common/authInput';
+import {AuthInput} from '@common/Input';
 
 import {
   NativeStackNavigationProp,
@@ -22,10 +22,10 @@ import {
 } from '@react-navigation/native-stack';
 import {useAppDispatch, useAppSelector} from '@hooks/redux';
 import {useTranslation} from 'react-i18next';
-import {AppButton} from '@common/appButton';
-import {Loader} from '@common/loader';
+import {AppButton} from '@common/Button';
+import {Loader} from '@common/LoadingIndicator';
 import {ApiResponse, IInvoice} from '@models/APIModels';
-import {AppTextArea} from '@common/appTextArea';
+import {AppTextArea} from '@common/TextArea';
 import {DashboardAction} from '@redux/reducer/DashboardSlice';
 import {images} from '@assets/images';
 
