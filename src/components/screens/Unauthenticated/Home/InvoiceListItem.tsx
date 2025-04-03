@@ -57,7 +57,9 @@ const InvoiceListItemComp: React.FC<InvoiceListItemProps> = ({
     invoiceDate = '',
     dueDate,
     customer,
+    referenceNo,
   } = item;
+  console.log(JSON.stringify(item));
   return (
     <Pressable
       testID={invoiceNumber}
@@ -82,6 +84,11 @@ const InvoiceListItemComp: React.FC<InvoiceListItemProps> = ({
           />
         )}
         <VStack>
+          <RenderDetailItem
+            title="Reference number:"
+            description={referenceNo}
+            textColor="black"
+          />
           <RenderDetailItem
             title="Date:"
             description={`${invoiceDate}`}
