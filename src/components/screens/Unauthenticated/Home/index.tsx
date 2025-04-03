@@ -138,6 +138,7 @@ const HomeScreenComp: React.FC<HomeScreenProps> = () => {
     <VStack testID="home-screen-container" flex={1} safeArea bgColor={'white'}>
       <HStack mx={3}>
         <AppInput
+          testID="input-iv-id"
           ref={searchInputRef}
           heading=""
           type={'text'}
@@ -154,6 +155,7 @@ const HomeScreenComp: React.FC<HomeScreenProps> = () => {
           onEndEditing={e => {}}
           InputRightElement={
             <AppButton
+              testID="search-btn"
               size="xs"
               rounded="none"
               w="1/4"
@@ -173,6 +175,7 @@ const HomeScreenComp: React.FC<HomeScreenProps> = () => {
         justifyContent={'space-between'}
         mb={3}>
         <AppSelect
+          testID="filter-by"
           containerProps={{
             mt: '2',
             maxW: WP(45),
@@ -185,6 +188,7 @@ const HomeScreenComp: React.FC<HomeScreenProps> = () => {
           {RenderStatusFilterData()}
         </AppSelect>
         <AppSelect
+          testID="order-by"
           containerProps={{
             mt: '2',
             maxW: WP(45),
@@ -219,6 +223,7 @@ const HomeScreenComp: React.FC<HomeScreenProps> = () => {
         )}
       />
       <Fab
+        testID="fab"
         style={{
           width: 50,
           height: 50,

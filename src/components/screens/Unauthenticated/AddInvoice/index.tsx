@@ -200,6 +200,7 @@ const CreateInvoiceScreenComp: React.FC<CreateInvoiceScreenProps> = ({
           {({errors, handleChange, handleBlur, handleSubmit, values}) => (
             <>
               <AuthInput
+                testID="reference"
                 placeholder={t('createInvoicesScreen:referenceFieldHeading')}
                 heading={''}
                 onChangeText={handleChange('reference')}
@@ -213,6 +214,7 @@ const CreateInvoiceScreenComp: React.FC<CreateInvoiceScreenProps> = ({
                 error={errors.reference}
               />
               <AuthInput
+                testID="date"
                 heading={''}
                 onChangeText={handleChange('date')}
                 value={values.date}
@@ -228,6 +230,7 @@ const CreateInvoiceScreenComp: React.FC<CreateInvoiceScreenProps> = ({
                 error={errors.date}
               />
               <AuthInput
+                testID="amount"
                 heading=""
                 placeholder={t('createInvoicesScreen:amountFieldHeading')}
                 onChangeText={handleChange('amount')}
@@ -244,6 +247,7 @@ const CreateInvoiceScreenComp: React.FC<CreateInvoiceScreenProps> = ({
               />
 
               <AppTextArea
+                testID="description"
                 heading=""
                 placeholder={t('createInvoicesScreen:descriptionFieldHeading')}
                 onChangeText={handleChange('description')}
@@ -260,6 +264,7 @@ const CreateInvoiceScreenComp: React.FC<CreateInvoiceScreenProps> = ({
               />
 
               <AppButton
+                testID="create-invoice"
                 mt={5}
                 onPress={() => {
                   handleSubmit();

@@ -29,4 +29,4 @@ const AppInputComp = React.forwardRef<TextInput, AppInputProps>(
   },
 );
 
-export const AppInput = memo(AppInputComp, isEqual);
+export const AppInput = AppInputComp;

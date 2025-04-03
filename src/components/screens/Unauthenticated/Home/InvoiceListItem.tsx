@@ -60,6 +60,7 @@ const InvoiceListItemComp: React.FC<InvoiceListItemProps> = ({
   } = item;
   return (
     <Pressable
+      testID={invoiceNumber}
       onPress={() => onPress && onPress(index)}
       style={styles.listContainer}
       mb={3}
