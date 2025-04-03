@@ -1,97 +1,80 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# Introduction
+This repo is a solution to a home test for `101 Digital: ReactNative Assessment`
+# Demo video
 
-# Getting Started
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+https://github.com/user-attachments/assets/57c6d93e-4a33-45ad-99ae-b2bbbc5f7d64
 
-## Step 1: Start Metro
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+# Requirement Checklist
+| Screen | Item | Status |
+| - | - | - |
+| Login | Follow the API specification provided in Appendix A | ✅ |
+| | Create a screen / form to login and save the required data to use in subsequent API calls | ✅ |
+| | The form should have validations | ✅ |
+| Create Invoice | Follow the API specification provided in Appendix A | ✅ |
+| | Create a screen / form to capture the Invoice inputs | ✅ |
+| | The invoice should have only 1 line item. | ✅ |
+| | The form should have validations | ✅ |
+| List / Search / View Invoices | Build a screen / form to display a LIST of invoices that have been created | ✅ |
+| | Each time you create a new invoice, it should be shown in this list | ✅ |
+| | Set list as home screen | |
+| | The screen should allow the user to do some of the more common list management feature such as search, sort, filter | ✅ |
+# Solution Guideliness checklist
+| Item | Status |
+| - | - |
+| Implement using React Native CLI | ✅ |
+| Needs to work on iOS and Android | ✅ |
+| Feel free to use whatever mechanism you see fit in order to visually present your UI | ✅ |
+| You are free to use any popular open source libraries that you are familiar with for productivity and efficiency | ✅ |
+| Code should be well-commented | ✅ |
+| Your code should have some level of automated tests | ✅ |
+| Automated UI tests using Detox will be viewed favorably. | ✅ |
+# Technical approaches
+- Framework: React native
+- State managemen tool: Redux
+- Automation test tool: Detox
+- Screens: 3 screens including Login, Home, Create Invoice
+- Packages
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+| Package | Purpose |
+| - | - |
+| Native-base | UI component |
+| Yup | Validation |
+| Formik | Handling form |
+| i18next | Handle multiple language support |
+| Redux | State management |
+| Patch packge | Handle package modifying |
 
-```sh
-# Using npm
-npm start
+# Technical perspective
 
-# OR using Yarn
-yarn start
-```
+## How to run
+1. Open terminal and run `npm i` or `yarn`
+2. Run `npm run start` or `yarn start` to start the metro bundle
+3. Run `npm run android` to run the app on Android or `npm run ios` to run the app on iOS
 
-## Step 2: Build and run your app
+## How to run automation test
+1. Open terminal and run `npm i` or `yarn`
+2. Run `npm run start` or `yarn start` to start the metro bundle
+3. Build test application with `detox build --configuration ios.sim.debug` for iOS and `detox build --configuration android.emu.debug` for Android 
+4. Run test with `detox test --configuration ios.sim.debug` for iOS and `detox test --configuration android.emu.debug` for Android
 
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
+**Test results**
 
-### Android
+![Screenshot 2025-04-03 at 08 36 43](https://github.com/user-attachments/assets/381cd2d0-2f6c-4bdc-b6b2-bbfc7ef97d14)
+![Screenshot 2025-04-03 at 08 57 43](https://github.com/user-attachments/assets/d8e90202-0840-4dfe-8dd2-36b781122ebc)
+![Screenshot 2025-04-03 at 09 07 28](https://github.com/user-attachments/assets/4db65de7-08b5-4a67-9e91-9ee946c8da19)
 
-```sh
-# Using npm
-npm run android
+# Comments
+During the implementation phase there are 2 problem comming up
+## The application is running with React Native version 0.78.2 which is incompatible with native-base library 
+- `BackHandler.removeEventListener` is removed https://reactnative.dev/docs/backhandler. However native-base is still using it https://github.com/GeekyAnts/NativeBase/blob/master/src/hooks/useKeyboardDismissable.ts#L54
+- **Solution**: Using patch package to overwrite the native-base to resolve the issue
 
-# OR using Yarn
-yarn android
-```
+## Create invoice returning the validation error from backend
+- **Solution**: Add addressType to fix the payload
+  
+  ![image](https://github.com/user-attachments/assets/066fb7d6-a0ca-4670-997b-5961e6b03863)
 
-### iOS
 
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
 
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
-
-```sh
-bundle install
-```
-
-Then, and every time you update your native dependencies, run:
-
-```sh
-bundle exec pod install
-```
-
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
-
-```sh
-# Using npm
-npm run ios
-
-# OR using Yarn
-yarn ios
-```
-
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
-
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
-
-## Step 3: Modify your app
-
-Now that you have successfully run the app, let's make changes!
-
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
-
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
-
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
