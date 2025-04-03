@@ -18,7 +18,7 @@ https://github.com/user-attachments/assets/57c6d93e-4a33-45ad-99ae-b2bbbc5f7d64
 | | The form should have validations | ✅ |
 | List / Search / View Invoices | Build a screen / form to display a LIST of invoices that have been created | ✅ |
 | | Each time you create a new invoice, it should be shown in this list | ✅ |
-| | Set list as home screen | |
+| | Set list as home screen | ✅ |
 | | The screen should allow the user to do some of the more common list management feature such as search, sort, filter | ✅ |
 # Solution Guideliness checklist
 | Item | Status |
