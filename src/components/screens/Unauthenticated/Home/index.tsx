@@ -135,7 +135,7 @@ const HomeScreenComp: React.FC<HomeScreenProps> = () => {
     [queryParams],
   );
   return (
-    <VStack flex={1} safeArea bgColor={'white'}>
+    <VStack testID="home-screen-container" flex={1} safeArea bgColor={'white'}>
       <HStack mx={3}>
         <AppInput
           ref={searchInputRef}

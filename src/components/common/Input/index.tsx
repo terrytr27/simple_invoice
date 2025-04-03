@@ -11,11 +11,12 @@ interface AuthInputProps extends AppInputProps {
 
 const AuthInputComp: React.FC<AuthInputProps> = props => {
   const {error, containerProps, ...rest} = props;
+  const testId = props.testID ?? '';
   return (
     <VStack {...containerProps}>
       <AppInput {...rest} borderColor={error ? 'red.500' : null} />
       {error ? (
-        <HStack alignItems={'center'}>
+        <HStack testID={`${testId}-error`} alignItems={'center'}>
           <WarningOutlineIcon color={'red.400'} size="xs" />
           <Text ml={'1'} mb={'0'} fontSize="sm" color={'red.400'}>
             {error}

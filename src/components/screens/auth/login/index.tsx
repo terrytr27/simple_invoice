@@ -29,8 +29,8 @@ interface LoginFormValues {
   password: string;
 }
 const initialValues: LoginFormValues = {
-  email: '94756921275',
-  password: 'Password@12345',
+  email: '',
+  password: '',
 };
 
 const LoginScreenComp: React.FC<LoginScreenProps> = () => {
@@ -63,10 +63,11 @@ const LoginScreenComp: React.FC<LoginScreenProps> = () => {
         }) => (
           <>
             <VStack flex={1} marginX={'10'} justifyContent="center">
-              <AppHeading alignSelf={'center'} mb={10}>
+              <AppHeading testID="login-heading" alignSelf={'center'} mb={10}>
                 {t('app:name')}
               </AppHeading>
               <AuthInput
+                testID="login-username-input"
                 heading={t('loginScreen:emailPlaceholder')}
                 onChangeText={handleChange('email')}
                 onBlur={handleBlur('email')}
@@ -79,6 +80,7 @@ const LoginScreenComp: React.FC<LoginScreenProps> = () => {
                 error={errors.email}
               />
               <AuthInput
+                testID="login-password-input"
                 onChangeText={handleChange('password')}
                 onBlur={handleBlur('password')}
                 value={values.password}
@@ -92,7 +94,10 @@ const LoginScreenComp: React.FC<LoginScreenProps> = () => {
                 error={errors.password}
               />
 
-              <AppButton mt={'8'} onPress={() => handleSubmit()}>
+              <AppButton
+                testID="login-btn"
+                mt={'8'}
+                onPress={() => handleSubmit()}>
                 {t('common:login')}
               </AppButton>
             </VStack>
